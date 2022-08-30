@@ -1,26 +1,14 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class Test {
-
-    private BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-
-    public String getInput(String prompt) {
-        System.out.println(prompt);
-        String input = "";
-        try {
-            input = bufferRead.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return input;
-    }
-
     public static void main(String[] args) {
-
-        Test test = new Test();
-        String hey = test.getInput("Enter a number:");
-        System.out.println(hey);
+        int[] array = new int[1000000];
+        long now = System.nanoTime();
+        Arrays.fill(array, 0);
+        long time_taken = System.nanoTime() - now;
+        System.out.println(time_taken);
     }
 }
